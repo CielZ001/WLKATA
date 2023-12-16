@@ -3,3 +3,4 @@ openai
 langchain
 tiktoken
 langchain_core
+faiss-cpu
