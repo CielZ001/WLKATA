@@ -100,7 +100,7 @@ QA_PROMPT_revised = PromptTemplate(
 )
 
 
-if prompt := st.chat_input("Ask anything about learning sciences research!"):
+if prompt := st.chat_input("Ask anything about WLKATA!"):
     st.session_state.messages.append(ChatMessage(role="user", content=prompt))
     st.chat_message("user").write(prompt)
 
@@ -115,8 +115,8 @@ if prompt := st.chat_input("Ask anything about learning sciences research!"):
             retriever=retriever, chain_type="stuff",
             combine_docs_chain_kwargs={'prompt': QA_PROMPT_revised}, memory=memory,
             verbose=True, return_source_documents=True)
-        with st.spinner("searching through learning sciences research papers and preparing citations..."):
-            res = qa({"question": st.session_state.messages[-1].content})
+        # with st.spinner("searching through learning sciences research papers and preparing citations..."):
+        res = qa({"question": st.session_state.messages[-1].content})
         # st.write(res)
 
     st.session_state.messages.append(ChatMessage(role="assistant", content=res['answer']))
