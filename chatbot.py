@@ -16,7 +16,7 @@ from langchain import PromptTemplate
 import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-txt_path = os.path.join(current_dir, 'r', 'output1.txt')
+txt_path = os.path.join(current_dir, 'r', 'output.txt')
 
 # txt_path = "output1.txt"
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
