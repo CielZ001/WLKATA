@@ -1,5 +1,5 @@
 streamlit
 openai
-langchain==0.0.162
-openai==0.27.7
+langchain
 tiktoken
+langchain_core
