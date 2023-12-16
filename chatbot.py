@@ -15,8 +15,7 @@ from langchain.llms import OpenAI
 from langchain import PromptTemplate
 
 txt_path = "output1.txt"
-# OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
-OPENAI_API_KEY = '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'
+OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
 # Load text
 loader = TextLoader(txt_path)
 documents = loader.load()
