@@ -13,8 +13,12 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationSummaryBufferMemory
 from langchain.llms import OpenAI
 from langchain import PromptTemplate
+import os
 
-txt_path = "output1.txt"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+txt_path = os.path.join(current_dir, 'r', 'output1.txt')
+
+# txt_path = "output1.txt"
 OPENAI_API_KEY = st.secrets['OPENAI_API_KEY']
 # Load text
 loader = TextLoader(txt_path)
