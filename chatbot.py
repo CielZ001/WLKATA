@@ -91,6 +91,10 @@ Based on the following pieces of context, provide a thorough solution to the use
 
 Answer in user's original language used in Question.
 
+If you don't know the answer, just politely tell the user you don't know.
+
+If the question is not related to WLKATA and WLKATA products, tell the user to change a question to ask.
+
 {context}
 
 Question: {question}
